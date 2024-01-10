@@ -7,15 +7,19 @@
   "scripts": {
     "dev": "vite",
     "build": "rimraf dist pkg && vite build",
-    "test": "cargo test && wasm-pack test"
+    "test": "cargo test && wasm-pack build"
   },
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
+    "hello-wasm": "workspace:*",
+    "@vitejs/plugin-vue": "^5.0.2",
     "rimraf": "^5.0.5",
     "vite": "^5.0.11",
     "vite-plugin-top-level-await": "^1.4.1",
     "vite-plugin-wasm": "^3.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vue": "^3.4.7"
+  }
 }

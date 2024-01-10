@@ -1,5 +1,3 @@
-async function main() {
-    const module = await import('../pkg/hello_wasm.js');
-    module.greet();
-}
-main();
+import { createApp } from 'vue'
+import App from './App.vue'
+createApp(App).mount('#app')
