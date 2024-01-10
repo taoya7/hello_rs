@@ -1,7 +1,7 @@
 use wasm_bindgen::prelude::*;
-use web_sys::console;
 
 #[wasm_bindgen]
-pub fn greet() {
-    console::log_1(&JsValue::from_str("Hello World!"));
+pub fn md5(input: &str)-> String {
+    let digest = md5::compute(input);
+    format!("{:x}", digest)
 }
