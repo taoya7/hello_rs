@@ -1,13 +1,7 @@
-extern crate wasm_bindgen;
-
 use wasm_bindgen::prelude::*;
+use web_sys::console;
 
 #[wasm_bindgen]
-extern {
-    pub fn alert(s: &str);
-}
-
-#[wasm_bindgen]
-pub fn greet(name: &str) {
-    alert(&format!("Hello, {}!", name));
+pub fn greet() {
+    console::log_1(&JsValue::from_str("Hello World!"));
 }
